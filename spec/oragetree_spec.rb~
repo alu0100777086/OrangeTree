@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'orangetree'
 
 describe OrangeTree do
-	before :each do
+	before :all do
 		@tree = OrangeTree.new
 	end
 	it "Comprobacion de inicializacion de la clase" do
