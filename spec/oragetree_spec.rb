@@ -4,6 +4,8 @@ require 'orangetree'
 describe OrangeTree do
 	before :each do
 		@tree = OrangeTree.new
+		@mutex = Mutex.new
+        @recurso = ConditionVariable.new
 	end
 	it "Comprobacion de inicializacion de la clase" do
 		@tree.is_a?(OrangeTree)
@@ -29,4 +31,8 @@ describe OrangeTree do
 	it "Comprobacion del metodo que cuenta las naranjas" do
 		expect(@tree.time_passes).to eq("I'm still unable to bear fruit")
 	end
+ 
+
 end
+
+
